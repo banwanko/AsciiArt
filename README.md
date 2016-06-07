@@ -1,2 +1,11 @@
 # AsciiArt
-ASCIIDescription を利用したデモ
+
+Use ASCIIDescription Application.
+
+## Screenshot
+
+![](ss.png)
+
+## License
+
+Licensed under the MIT License
