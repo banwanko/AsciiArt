@@ -2,12 +2,14 @@
 
 . setup_env.sh
 
-# ビルド番号振り直し
+# ビルド番号セット
 agvtool new-version -all ${BUILD_NUMBER}
 
 # アーカイブ
-xcodebuild clean archive -project ${PROJECT_NAME}.xcodeproj -target $TARGET -archivePath Archive
-xcodebuild -exportArchive -exportFormat ipa -archivePath ./Archive.xcarchive -exportPath Sample.ipa -exportProvisioningProfile 'XC: com.example'
+xcodebuild clean
+xcodebuild -project ${PROJECT_NAME}.xcodeproj -configuration ${BUILD_MODE}
 
 # IPA
-xcodebuild -exportArchive -exportFormat IPA -archivePath ${WORKSPACE}/Archive.xcarchive -exportPath ${PROJECT_NAME}-${VERSION}.ipa -exportProvisioningProfile ${PROVISIONING}
+xcrun -sdk iphoneos PackageApplication build/Release-iphoneos/${PROJECT_NAME}.app \
+  -o ${WORKSPACE}/${IPA_DIR}.ipa
+  
