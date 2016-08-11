@@ -1,5 +1,5 @@
 app_identifier "net.roworks.asciiart" # The bundle identifier of your app
-#apple_id "oga@e-mail.jp" # Your Apple email address
+apple_id "oga@e-mail.jp" # Your Apple email address
 
 team_id "8WRZ2XSBH9"  # Developer Portal Team ID
 
