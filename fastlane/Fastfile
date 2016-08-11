@@ -2,6 +2,7 @@
 fastlane_version "1.98.0"
 
 default_platform :ios
+ENV["GYM_USE_LEGACY_BUILD_API"] = true
 
 platform :ios do
     before_all do
@@ -15,6 +16,11 @@ platform :ios do
             scheme: "",
             destination: "platform=iOS Simulator,name=iPhone 6,OS=9.3",
         )
+    end
+    
+    desc "Build"
+    lane :build do
+       gym(scheme: "AsciiArt") 
     end
     
     desc "Build for AdHoc"
