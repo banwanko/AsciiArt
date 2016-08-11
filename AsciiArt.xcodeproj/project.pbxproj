@@ -278,10 +278,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ryuji Watanabe (8WRZ2XSBH9)";
 				INFOPLIST_FILE = AsciiArt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.roworks.AsciiArt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6c3c5ab0-8a34-4363-8f3d-6409cd0b87c8";
 				SWIFT_OBJC_BRIDGING_HEADER = "AsciiArt/AsciiArt-Bridging-Header.h";
 			};
 			name = Release;
