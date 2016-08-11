@@ -26,7 +26,8 @@ platform :ios do
     desc "Build for AdHoc"
     lane :adhoc do
         sigh(
-            adhoc: true
+            adhoc: true,
+            provisioning_name: "XC:AdHocAsciiArt"
         )
         ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
         gym(
