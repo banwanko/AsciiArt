@@ -4,6 +4,7 @@
 PROJECT_NAME='AsciiArt'
 BUILD_MODE='Release'
 PROVISIONING='XC:AdHocAsciiArt'
+FL_CARTHAGE_PLATFORM="iOS"
 
 # Fixed Env
 XCODE_VER=""

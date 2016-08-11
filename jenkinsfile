@@ -1,0 +1,15 @@
+node('master') {
+
+	stage 'Clone'
+	git url: 'https://github.com/banwanko/AsciiArt.git'
+
+	stage 'Prepare'
+	env.PATH = '/usr/local/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH'
+	sh 'setup_env.sh'
+
+	stage "Unit test"
+		sh "fastlane test"
+
+	stage "adhoc build"
+  	sh ''fastlane adhoc'''
+}
