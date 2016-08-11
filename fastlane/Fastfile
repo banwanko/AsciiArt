@@ -2,7 +2,7 @@
 fastlane_version "1.98.0"
 
 default_platform :ios
-ENV["GYM_USE_LEGACY_BUILD_API"] = true
+ENV["GYM_USE_LEGACY_BUILD_API"] = "true"
 
 platform :ios do
     before_all do
