@@ -65,3 +65,5 @@ fastlane/screenshots
 *.zip
 
 *.mobileprovision
+
+.DS_Store

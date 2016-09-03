@@ -27,6 +27,7 @@ platform :ios do
     lane :adhoc do
         sigh(
             adhoc: true
+
         )
         ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
         gym(
