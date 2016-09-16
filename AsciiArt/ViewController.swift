@@ -10,6 +10,8 @@ import UIKit
 import Photos
 
 class ViewController: UIViewController {
+    private let Couner = CGFloat(1)
+    
     @IBOutlet weak var textView: UITextView!
     // font size
     var fontSize = CGFloat(5) {
@@ -30,15 +32,18 @@ class ViewController: UIViewController {
     }
     // up
     @IBAction func upButtonTapped(sender: AnyObject) {
-        fontSize += 1
+        fontSize += Couner
     }
     // down
     @IBAction func downButtonTapped(sender: AnyObject) {
-        fontSize -= 1
+        if fontSize <= 0 {
+            return
+        }
+        fontSize -= Couner
     }
     // share
     @IBAction func shareButtonAction(sender: AnyObject) {
-        let activity      = UIActivityViewController(activityItems: [textView.text], applicationActivities: nil)
+        let activity = UIActivityViewController(activityItems: [textView.text], applicationActivities: nil)
         presentViewController(activity, animated: true, completion: nil)
     }
 }
