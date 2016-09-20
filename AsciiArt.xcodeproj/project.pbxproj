@@ -286,7 +286,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.roworks.asciiart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6c3c5ab0-8a34-4363-8f3d-6409cd0b87c8";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AsciiArt/AsciiArt-Bridging-Header.h";
 			};
 			name = Release;
